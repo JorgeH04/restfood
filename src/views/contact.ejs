@@ -1,0 +1,119 @@
+<% include partials/_header %>
+
+<main class="container">
+    <div class="contact row align-items-start card-body">
+
+        <div class="contact__form col-lg-7 col-md-6 col-12 ">
+            <div class="card-body">
+                <div class="card-header">
+                    <h2 class="font-primary text-capitalize font-weight-bold">Get In touch</h2>
+                    <h6>Please drop your comments, queries and suggestions.</h6>
+                </div>
+                <form class="card-body" method="post" action="">
+                    <div class="input-group input-group-lg mb-3">
+                        <div class=" input-group-prepend">
+                            <span class="input-group-text"><i class="fas fa-user"></i></span>
+                        </div>
+                        <input type="text" placeholder="Name" class=" form-control form-control-sm" required>
+                    </div>
+                    <div class="input-group input-group-lg mb-3">
+                        <div class=" input-group-prepend">
+                            <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                        </div>
+                        <input type="email" placeholder="Email" class=" form-control" required>
+                    </div>
+                    <div class="dropdown form-group" id="select-type">
+                        <button class="btn btn-secondary btn-block dropdown-toggle" data-toggle="dropdown" >
+                            Type <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" id="type-menu">
+                            <li class="dropdown-item">Restaurant or Food Experience</li>
+                            <li class="dropdown-item">Website or Mobile Experience</li>
+                            <li class="dropdown-item">Refund</li>
+                            <li class="dropdown-item">Late Delivery</li>
+                            <li class="dropdown-item">General Inquiry or Comment</li>
+                        </ul>
+                    </div>
+                    <div class="dropdown form-group" id="select-city">
+                        <button class="btn btn-secondary btn-block dropdown-toggle" data-toggle="dropdown" >
+                            City <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" id="city-menu">
+                            <li class="dropdown-item">Karachi</li>
+                            <li class="dropdown-item">Lahore</li>
+                            <li class="dropdown-item">Islamabad</li>
+                            <li class="dropdown-item">Peshawar</li>
+                            <li class="dropdown-item">Quetta</li>
+                            <li class="dropdown-item">Multan</li>
+                        </ul>
+                    </div>
+                    <div class="input-group input-group-lg mb-3">
+                        <div class=" input-group-prepend">
+                            <span class="input-group-text"><i class="fas fa-pencil-alt"></i></span>
+                        </div>
+                        <textarea name="" id="" cols="30" rows="5" placeholder="Message" class="form-control" required></textarea>
+                    </div>
+        
+                        <button class="btn btn-block btn-outline-reddish font-weight-bold">Submit</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="contact__info col-lg-5 col-md-6 col-12  mb-md-0 mb-3 ">
+            <div class="card text-md-left text-center">
+                <div class="card-body">
+                    <div>
+                        <h2 class="card-title font-primary">Contact With Us</h2>
+                        <p>We’re here to help and answer any question you might have. We look forward to hearing from you 🙂</p>
+                    </div>
+                    <div class="d-flex card-header">
+                        <div class="d-flex justify-content-center">
+                            <i class="fas fa-phone mr-2"></i>      
+                            <h6 class="mr-2 font-weight-bold">Phone</h6>
+                        </div>                          
+                        <p>07939 981 855</p>
+                    </div>
+                    <div class="d-flex card-header">
+                        <div class="d-flex justify-content-center">
+                            <i class="fas fa-map-marker-alt mr-2"></i>      
+                            <h6 class="mr-2 font-weight-bold">Location</h6>
+                        </div>                          
+                        <p>MCR Pvt Ltd, 7th Floor, Shahnaz Arcade, Shaheed-e-Millat Road, Karachi, Pakistan</p>
+                    </div>
+                    <div class="d-flex card-header">
+                        <div class="d-flex justify-content-center">
+                            <i class="fas fa-envelope mr-2"></i>      
+                            <h6 class="mr-2 font-weight-bold">Email</h6>
+                        </div>                          
+                        <a href="mailto:jane@feast-food.com">jane@feast-food.com</a>
+                    </div>
+                    <div class="d-flex card-header">
+                        <div class="d-flex justify-content-center">
+                            <i class="fab fa-facebook mr-2"></i>      
+                            <h6 class="mr-2 font-weight-bold">Facebook</h6>
+                        </div>                          
+                        <a href="https://www.facebook.com/feastfood/">www.facebook.com/feastfood/</a>
+                    </div>
+                    <div class="d-flex card-header">
+                        <div class="d-flex justify-content-center">
+                            <i class="fab fa-twitter mr-2"></i>      
+                            <h6 class="mr-2 font-weight-bold">Twitter</h6>
+                        </div>                          
+                        <a href="https://twitter.com/feastmag?lang=en">twitter.com/feastmag</a>
+                    </div>
+                    <div class="d-flex card-body">
+                        <div class="d-flex justify-content-center">
+                            <i class="fab fa-instagram mr-2"></i>      
+                            <h6 class="mr-2 font-weight-bold">Instagram</h6>
+                        </div>                          
+                        <a href="http://instagram.com/feastgirl">instagram.com/feastgirl</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</main>
+
+
+<% include partials/_footer %>

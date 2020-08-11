@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/css/index.css">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,400i|Nunito:300,400,300i&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500,600,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/viewCartt.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    
+    <script src="/script/index.js" async></script>
+    <title>Feast Food</title>
+</head>
+<body class="container">
+  <nav class="navigation">
+
+      <ul class="head-nav">
+
+        <li class="head-nav__item">
+              <a href="/" class="head-nav__link">
+                  <div class="head-nav__logo">
+                        <img class="head-nav__logo" src="./media/images/logo.jpg">
+                  </div>
+                  
+              </a>
+        </li>
+        <% if(user) { %>
+
+        <li class="head-nav__item">
+            <a href="/users/profile" class="head-nav__link">
+                Profile
+            </a>
+        </li>
+
+        <li class="head-nav__item">
+            <a href="/users/logout" class="head-nav__link">
+                Logout
+            </a>
+       </li>
+       <% } else { %>                    
+
+
+       <li class="head-nav__item">
+        
+                <a href="/" class="head-nav__link">
+                    Home
+                </a>
+       </li>
+      
+        <li class="head-nav__item">
+                <a href="/users/signin" class="head-nav__link">
+                    Login
+                </a>
+       </li>
+
+
+       <li class="head-nav__item">
+          <a href="/users/signup" class="head-nav__link">
+            Registrarse
+           </a>
+      </li>
+       <% } %>
+
+      
+       <li class="head-nav__item-cart">
+          <a href="/shopcart/" class="head-nav__link">
+            <i class="fas fa-2x fa-shopping-cart"></i>
+            <% if(session.cart) { %>
+              <div class="cart-items"><%= session.cart.totalQty%></div>
+            <% } %>
+          </a>
+      </li>
+         
+      </ul>
+
+     
+
+  </nav>

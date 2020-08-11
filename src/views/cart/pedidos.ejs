@@ -1,0 +1,63 @@
+<% include ../partials/_header %>
+
+
+
+      
+<div class="col-md-12 ">
+    <% orders.forEach(function (order) { %>
+
+<table class="table table-bordered table-hover mt-5">
+<thead>
+ <tr>
+
+    <th>Producto</th>
+    <th>Cantidad</th>
+    <th>Precio</th>
+    <th>Precio Total</th>
+    
+ </tr>
+</thead>
+<tbody>
+          
+           
+
+               <tr>
+                    <% order.items.forEach(function (item) { %>
+
+                    <td><%= item.item.title %></td>
+                    <td><%= item.qty %></td>
+                    <td><%= item.price %></td>
+                    <td><%= item.total %></td>
+
+                </tr>
+            </tbody>
+            
+                 <tr>
+                    <% }) %>
+
+
+          
+
+                   
+
+                    <td>Nombre: <%= order.name %></td>
+                    <td>Número  <%= order.number %></td>
+                    <td>Dirección:  <%= order.address %></td>
+                    <td>Fecha:  <%= order.fecha %></td>
+            
+                    </tr>
+            
+                    <% }) %>    
+            
+
+
+</tbody>
+</table>
+
+</div>
+</div>
+
+</div>
+  
+
+<% include ../partials/_footer %>      
