@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="/css/viewCartt.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     
+   
     <script src="/script/index.js" async></script>
     <title>Feast Food</title>
 </head>
@@ -25,6 +26,12 @@
                   </div>
                   
               </a>
+        </li>
+
+        <li class="head-nav__item">
+                <a href="/produnoindex/1" class="head-nav__link">
+                    Menu
+                </a>
         </li>
         <% if(user) { %>
 
@@ -42,12 +49,7 @@
        <% } else { %>                    
 
 
-       <li class="head-nav__item">
-        
-                <a href="/" class="head-nav__link">
-                    Home
-                </a>
-       </li>
+       
       
         <li class="head-nav__item">
                 <a href="/users/signin" class="head-nav__link">

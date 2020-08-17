@@ -19,71 +19,73 @@
 <body class="">
 
     <nav class="navigation">
-            <ul class="head-nav mb-0">
-        
-                <li class="head-nav__item">
-                    <a href="index.html" class="head-nav__link">
-                        <div class="head-nav__logo">
-                                <img class="head-nav__logo" src="./media/images/logo.jpg">
-                        </div>
-                        
-                    </a>
-                </li>
-        
-                <li class="head-nav__item">
-                        <a href="#" class="head-nav__link font-weight-bold">
-                            Menu
-                        </a>
-                </li>
-        
-                <li class="head-nav__item">
-                    
-                            <a href="viewCart.html" class="head-nav__link">
-                                Order
-                            </a>
-                </li>
-                
-                <li class="head-nav__item">
-                                <a href="detail.html" class="head-nav__link">
-                                    Deals
-                                </a>
-                </li>
-        
-                <li class="head-nav__item">
-                        <a href="about.html" class="head-nav__link">
-                            About
-                        </a>
-                </li>
-        
-                <li class="head-nav__item">
-                        <a href="contact.html" class="head-nav__link">
-                            Contact us
-                        </a>
-                </li>
-        
-                <li class="head-nav__item">
-                        <a href="login.html" class="head-nav__link ">
-                        Login
-                        </a>
-                </li>
-        
-                <li class="head-nav__item">
-                        <a href="signup.html" class="head-nav__link">
-                        Sign UP
-                        </a>
-                </li>
 
-                <li class="head-nav__item-cart">
-                        <a href="viewCart.html" class="head-nav__link">
-                            <i class="fas fa-2x fa-shopping-cart"></i>
+            <ul class="head-nav mb-0">
+
+                    <li class="head-nav__item">
+                          <a href="/" class="head-nav__link">
+                              <div class="head-nav__logo">
+                                    <img class="head-nav__logo" src="/media/images/logo.jpg">
+                              </div>
+                              
+                          </a>
+                    </li>
+                    <% if(user) { %>
+            
+                    <li class="head-nav__item">
+                        <a href="/users/profile" class="head-nav__link">
+                            Profile
                         </a>
-                </li>
-            </ul>
+                    </li>
+            
+                    <li class="head-nav__item">
+                        <a href="/users/logout" class="head-nav__link">
+                            Logout
+                        </a>
+                   </li>
+                   <% } else { %>                    
+            
+            
+                   <li class="head-nav__item">
+                    
+                            <a href="/" class="head-nav__link">
+                                Home
+                            </a>
+                   </li>
+                  
+                    <li class="head-nav__item">
+                            <a href="/users/signin" class="head-nav__link">
+                                Login
+                            </a>
+                   </li>
+            
+            
+                   <li class="head-nav__item">
+                      <a href="/users/signup" class="head-nav__link">
+                        Registrarse
+                       </a>
+                  </li>
+                   <% } %>
+            
+                  
+                   <li class="head-nav__item-cart">
+                      <a href="/shopcart/" class="head-nav__link">
+                        <i class="fas fa-2x fa-shopping-cart"></i>
+                        <% if(session.cart) { %>
+                          <div class="cart-items"><%= session.cart.totalQty%></div>
+                        <% } %>
+                      </a>
+                  </li>
+                     
+                  </ul>
+
+
+
     </nav>
 
     <div class="container my-5">
         <div class="nav-category row align-items-center align-content-start justify-content-center">
-           <a href="#" class="nav-category__item col-md-3 col-sm-6 col-12 btn btn-primary font-secondary text-uppercase"> Nav Item</a>
+           <a href="/proddosindex/1" class="nav-category__item col-md-3 col-sm-6 col-12 btn btn-primary font-secondary text-uppercase"> Platos del día</a>
            <a href="#" class="nav-category__item col-md-3 col-sm-6 col-12 btn btn-primary font-secondary text-uppercase"> Nav Item</a>
            <a href="#" class="nav-category__item col-md-3 col-sm-6 col-12 btn btn-primary font-secondary text-uppercase"> Nav Item</a>
            <a href="#" class="nav-category__item col-md-3 col-sm-6 col-12 btn btn-primary font-secondary text-uppercase"> Nav Item</a>
